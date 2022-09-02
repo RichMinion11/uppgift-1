@@ -1,0 +1,43 @@
+* {
+    color: rgb(28, 234, 32);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header {
+    font-size: 300%;
+}
+
+.tomato {
+    font-size: 200%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.skull {
+    color: aqua
+}
+
+body {
+    background-color: blueviolet;
+}
+
+.ninja {
+    position: relative;
+    bottom: 200px;
+}
+
+.ninjatext {
+    position: relative;
+    bottom: 200px;
+}
+
+.villetor {
+    color: floralwhite
+}
+
+.back {
+   float: right;
+   
+   
+    
+}
+
