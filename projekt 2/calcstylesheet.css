@@ -1,0 +1,93 @@
+/*******************************
+CSS main
+********************************/
+
+/* global styling */
+
+/*
+    Choose the colours you want for the calculator here.
+
+    Usage examples:
+
+    color: var(--fg-clr-normal); 
+    background: var(--bg-clr-light);
+
+    fg: foreground
+    bg: background
+    line: line color
+*/
+
+:root {
+    --fg-clr-normal: rgb(255, 255, 255);                                      /* standard for text */    
+   
+    --bg-clr-light: (#5b5b5b);                                
+    --bg-clr-iceblue: rgb(176, 176, 176);
+   
+    --line-clr-blue: rgb(220, 206, 206);
+    --line-clr-darkgray: rgb(176, 176, 176);
+    --gradient: linear-gradient(45deg,#E000FF, #3e0eff);
+    --gradient-alt: linear-gradient(45deg, #5b5b5b, #5b5b5b);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {                                                    /*main container for the whole page*/
+    display:flex ;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-image: var(--gradient);
+}
+
+.main {                                                         /*calc body*/
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    gap: .5rem; 
+    background-image: var(--gradient-alt);
+    border: 4px solid var(--line-clr-blue);
+    box-shadow: .125rem .125rem .125rem var(--bg-clr-gray);
+    min-width: 20%;
+    min-height: 35%;
+    padding: 1rem;
+
+}
+
+.calc-btn {                                                    /*calc buttons*/
+    height:  100%;
+    width: auto;
+    font-size: clamp(1rem, 1vw, 2rem);
+    
+}   
+
+.calc-screen {  
+                                                  /*Make sure the digits are centered in the middle*/
+    flex: 1;
+    align-items: center;                                        /*calculator screen*/
+    font-family: 'Courier New', Courier, monospace;
+    font-size: clamp(.55rem, 2vw, 3.5rem);                     /*clamp is useful if you want the page to be responsive. (minimum size, preferred size, max size) */
+    box-shadow: inset 1px 1px 0px var(--bg-clr-gray);           /*inset means that the shadow is inside the element - not outside - used here to create the illusion of a real screen - feel free to remove and see what you like best */
+    width: 230px;
+    height: clamp(1rem, 4.5vw, 4rem);
+    border: 1px solid var(--line-clr-darkgray);
+    background: var(--bg-clr-light);
+    color: var(--fg-clr-normal);
+    padding: .125rem;
+    overflow-x: scroll;
+}
+
+
+/* specifically for grid */
+
+.grid-col-span-2 {
+    grid-column: span 2;
+}
+
+.grid-col-span-4 {
+    grid-column: span 4;
+}
